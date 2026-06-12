@@ -1,0 +1,4 @@
+S002|Cau truc du lieu va thuat toan|Tran Thi B|Giao trinh|5|5
+S004|Giao trinh Java|Tran Van D|Giao trinh|15|15
+S001|Lap trinh C++ co ban|Nguyen Van A|Giao trinh|10|10
+S003|Thiet ke huong doi tuong|Le Van C|Ky thuat|7|7
