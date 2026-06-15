@@ -19,6 +19,10 @@ QuanLyThuVien/
 │   ├── sinhvien.cpp    # Triển khai quản lý bạn đọc
 │   ├── muontra.cpp     # Triển khai mượn/trả & thống kê
 │   └── menu.cpp        # Giao diện menu console
+├── data/            
+│   ├── sach.txt          # Lưu trữ vĩnh viễn danh sách các đầu sách
+│   ├── sinhvien.txt      # Lưu trữ vĩnh viễn danh sách thông tin bạn đọc
+│   └── muontra.txt       # Lưu trữ vĩnh viễn lịch sử và trạng thái phiếu mượn/trả
 └── README.md
 ```
 
