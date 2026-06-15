@@ -9,16 +9,19 @@ Chương trình quản lý thư viện viết bằng C++ thuần, sử dụng da
 ```
 QuanLyThuVien/
 ├── include/
-│   ├── sach.h          # Cấu trúc Sach, ListSach, khai báo hàm
-│   ├── sinhvien.h      # Cấu trúc BanDoc, ListBanDoc, khai báo hàm
-│   ├── muontra.h       # Cấu trúc PhieuMuon, ListPhieu, khai báo hàm
-│   └── menu.h          # Khai báo các hàm menu
+│   ├── sach.h            # Cấu trúc Sach, ListSach, khai báo hàm
+│   ├── sinhvien.h        # Cấu trúc BanDoc, ListBanDoc, khai báo hàm
+│   ├── muontra.h         # Cấu trúc PhieuMuon, ListPhieu, khai báo hàm
+|   ├── menu.h            # Khai báo các hàm menu
+│   └── file_io.h         # Khai báo các hàm Đọc/Ghi file (.txt)   
+|    
 ├── src/
-│   ├── main.cpp        # Điểm vào chương trình
-│   ├── sach.cpp        # Triển khai quản lý sách
-│   ├── sinhvien.cpp    # Triển khai quản lý bạn đọc
-│   ├── muontra.cpp     # Triển khai mượn/trả & thống kê
-│   └── menu.cpp        # Giao diện menu console
+│   ├── main.cpp          # Điểm vào chương trình
+│   ├── sach.cpp          # Triển khai quản lý sách
+│   ├── sinhvien.cpp      # Triển khai quản lý bạn đọc
+│   ├── muontra.cpp       # Triển khai mượn/trả & thống kê
+|   ├── menu.cpp          # Giao diện menu console
+│   └── file_io.cpp       # Cài đặt logic
 ├── data/            
 │   ├── sach.txt          # Lưu trữ vĩnh viễn danh sách các đầu sách
 │   ├── sinhvien.txt      # Lưu trữ vĩnh viễn danh sách thông tin bạn đọc
