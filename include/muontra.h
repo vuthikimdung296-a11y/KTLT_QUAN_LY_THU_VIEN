@@ -10,7 +10,7 @@
 // ================================================================
 const int       HAN_MUC_SV     = 3;    // Sinh viên mượn tối đa 3 cuốn
 const int       HAN_MUC_GV     = 5;    // Giảng viên mượn tối đa 5 cuốn
-const long long TIEN_PHAT_NGAY = 2000; // Phạt 2000đ / ngày quá hạn
+const long long TIEN_PHAT_NGAY = 5000; // Phạt 5000đ / ngày quá hạn
 
 // ================================================================
 //  STRUCT THỰC THỂ: PHIẾU MƯỢN
