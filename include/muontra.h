@@ -70,4 +70,8 @@ void timTop5SachMuonNhieuNhat(ListPhieu &lp, ListSach &ls);
 // Tiện ích thời gian
 int tinhKhoangCachNgay(std::string ngayTruoc, std::string ngaySau);
 
+// khai báo cập nhật trạng thái quá hạn
+void capNhatTrangThaiQuaHan(ListPhieu &lp, std::string ngayHomNay);
+
+
 #endif // MUONTRA_H

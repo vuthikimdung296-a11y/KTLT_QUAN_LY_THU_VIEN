@@ -331,3 +331,14 @@ void timTop5SachMuonNhieuNhat(ListPhieu &lp, ListSach &ls) {
 
     delete[] mangTk;
 }
+// Ham cap nhat trang thai qua han
+void capNhatTrangThaiQuaHan(ListPhieu &lp, string ngayHomNay) {
+    NodePhieu* p = lp.head;
+    while (p != NULL) {
+        if (p->data.trangThai == 0) { // Neu dang muon
+            int lech = tinhKhoangCachNgay(p->data.ngayHanTra, ngayHomNay);
+            if (lech > 0) p->data.trangThai = 2; // Chuyen sang qua han
+        }
+        p = p->next;
+    }
+}

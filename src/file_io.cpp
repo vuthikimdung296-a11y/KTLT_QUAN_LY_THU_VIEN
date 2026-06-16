@@ -177,15 +177,12 @@ void ghiFilePhieuMuon(ListPhieu &lp, const std::string &filename) {
     f << "# maPhieu|maSV|maSach|ngayMuon|ngayHanTra|ngayTra|trangThai\n";
     NodePhieu* cur = lp.head;
     while (cur != NULL) {
-        std::string ngayTraVal = cur->data.ngayTra;
-        if (ngayTraVal.empty()) ngayTraVal = "";
-        
         f << cur->data.maPhieu << "|"
           << cur->data.maSV << "|"
           << cur->data.maSach << "|"
           << cur->data.ngayMuon << "|"
           << cur->data.ngayHanTra << "|"
-          << ngayTraVal << "|"
+          << (cur->data.ngayTra.empty() ? "NULL" : cur->data.ngayTra) << "|"
           << cur->data.trangThai << "\n";
         cur = cur->next;
     }

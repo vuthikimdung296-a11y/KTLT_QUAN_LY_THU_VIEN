@@ -3,6 +3,17 @@
 using namespace std;
 
 // ================================================================
+//  KIỂM TRA ĐỊNH DẠNG NGÀY (YYYY-MM-DD)
+// ================================================================
+bool kiemTraFormatNgay(const string &ngay) {
+    if (ngay.length() != 10) return false;
+    if (ngay[4] != '-' || ngay[7] != '-') return false;
+    for (int i = 0; i < 10; i++)
+        if (i != 4 && i != 7 && !isdigit(ngay[i])) return false;
+    return true;
+}
+
+// ================================================================
 //  TIỆN ÍCH NHẬP LIỆU
 // ================================================================
 
@@ -65,13 +76,28 @@ void menuSach(ListSach &ls, ListPhieu &lp) {
                 ? cout << "  [OK] Them sach thanh cong!\n"
                 : cout << "  [!] Them sach that bai!\n";
 
-        } else if (chon == 2) {
+        }  else if (chon == 2) {
             string ma;
             cout << "\n-- XOA SACH --\n";
             docChuoi("  Ma sach can xoa: ", ma);
-            xoaSach(ls, ma)
-                ? cout << "  [OK] Da xoa!\n"
-                : cout << "  [!] Khong tim thay ma sach!\n";
+            
+            // Kiem tra rang buoc: Sach co dang duoc muon khong?
+            bool dangMuon = false;
+            NodePhieu* p = lp.head;
+            while (p != NULL) {
+                if (p->data.maSach == ma && (p->data.trangThai == 0 || p->data.trangThai == 2)) {
+                    dangMuon = true; break;
+                }
+                p = p->next;
+            }
+            
+            if (dangMuon) {
+                cout << "  [!] Loi: Sach nay dang duoc muon, khong the xoa!\n";
+            } else {
+                xoaSach(ls, ma)
+                    ? cout << "  [OK] Da xoa!\n"
+                    : cout << "  [!] Khong tim thay ma sach!\n";
+            }
 
         } else if (chon == 3) {
             cout << "\n-- SUA SACH (de trong + Enter = giu nguyen) --\n";
@@ -214,6 +240,16 @@ void menuSinhVien(ListBanDoc &lb, ListPhieu &lp) {
 // ================================================================
 
 void menuMuonTra(ListPhieu &lp, ListSach &ls, ListBanDoc &lb) {
+    // Bat buoc nhap ngay hom nay de dong bo qua han
+    string ngayHienTai;
+    while (true) {
+        cout << "\n[He thong] Nhap ngay hom nay (YYYY-MM-DD) de cap nhat du lieu: ";
+        getline(cin, ngayHienTai);
+        if (kiemTraFormatNgay(ngayHienTai)) break;
+        cout << "  -> Loi: Sai dinh dang ngay!\n";
+    }
+    capNhatTrangThaiQuaHan(lp, ngayHienTai);
+    capNhatSoLuongTon(ls, lp);
     int chon;
     do {
         cout << "\n"; inDongKe('=');
