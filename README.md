@@ -7,7 +7,7 @@ Chương trình quản lý thư viện viết bằng C++ thuần, sử dụng da
 ## Cấu Trúc Dự Án
 
 ```
-QuanLyThuVien/
+KTLT_QUAN_LY_THU_VIEN
 ├── include/
 │   ├── sach.h            # Cấu trúc Sach, ListSach, khai báo hàm
 │   ├── sinhvien.h        # Cấu trúc BanDoc, ListBanDoc, khai báo hàm
