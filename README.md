@@ -71,19 +71,27 @@ QuanLyThuVien/
 
 ## Cài Đặt & Biên Dịch
 
-**Yêu cầu:** GCC/G++ hỗ trợ C++11 trở lên.
+**Yêu cầu hệ thống:** Trình biên dịch GCC/G++ hỗ trợ chuẩn C++11 trở lên.
+
+Mở Terminal trong thư mục gốc của dự án (`KTLT_QUAN_LY_THU_VIEN`) và thực hiện tuần tự 2 bước sau:
+
+**Bước 1: Biên dịch chương trình (Compile)**
 
 ```bash
-# Biên dịch
-g++ -std=c++11 -Wall src/main.cpp src/sach.cpp src/sinhvien.cpp src/muontra.cpp src/menu.cpp -o QuanLyThuVien
-
-# Chạy chương trình
-./QuanLyThuVien
+g++ -std=c++11 -Wall src/main.cpp src/sach.cpp src/sinhvien.cpp src/muontra.cpp src/menu.cpp src/file_io.cpp -I include -o QuanLyThuVien
 ```
 
-Hoặc dùng Makefile (nếu có):
+**Bước 2: Khởi chạy chương trình (Run)**
+
+* Đối với Windows (PowerShell/CMD):
+
 ```bash
-make
+.\QuanLyThuVien.exe
+```
+
+* Đối với Linux / macOS:
+
+```bash
 ./QuanLyThuVien
 ```
 
@@ -119,4 +127,3 @@ Chọn mục tương ứng bằng cách nhập số và nhấn **Enter**.
 
 ---
 
-Dự án môn **Cấu Trúc Dữ Liệu & Giải Thuật** — phát triển bằng C++ không dùng STL containers (`vector`, `list`, v.v.).
