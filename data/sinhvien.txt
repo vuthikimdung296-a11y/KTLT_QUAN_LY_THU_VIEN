@@ -1,3 +1,4 @@
+#maSV|tenBanDoc|loaiBanDoc
 SV001|Nguyen Khanh Ky|1
 SV002|Le Hoang Nam|1
 GV001|Nguyen Thi Minh|2
