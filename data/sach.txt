@@ -1,6 +1,7 @@
 # maSach|tenSach|tacGia|theLoai|soLuongTong|soLuongThucTe
-S002|Cau truc du lieu va thuat toan|Tran Thi B|Giao trinh|5|5
-S004|Giao trinh Java|Tran Van D|Giao trinh|15|15
-S001|Lap trinh C++ co ban|Nguyen Van A|Giao trinh|10|10
-S003|Thiet ke huong doi tuong|Le Van C|Ky thuat|7|7
-S005|Co so du lieu |Le Van H|Ky thuat|7|7
+S002|Cau truc du lieu va thuat toan|Tran Thi B|Giao trinh|5|0
+S004|Giao trinh Java|Tran Van D|Giao trinh|15|14
+S001|Lap trinh C++ co ban|Nguyen Van A|Giao trinh|10|8
+S003|Thiet ke huong doi tuong|Le Van C|Ky thuat|7|6
+S006|Co so du lieu|Le Van H|Ky thuat|7|7
+S005|Lap trinh C++|Nguyen Van A|Giao trinh|10|7
